@@ -25,6 +25,9 @@ dataset/
 # Local SQLite databases (created automatically on first run)
 database/*.db
 
+# Generated PDF reports and documentation (kept local, never pushed to Git)
+*.pdf
+
 # MLflow run artifacts and logs (preserve mlflow.db sqlite file)
 mlruns/
 .pytest_cache/

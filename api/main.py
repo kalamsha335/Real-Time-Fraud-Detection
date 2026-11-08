@@ -1,5 +1,7 @@
-from fastapi import FastAPI, Depends
+from fastapi import FastAPI, Depends, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
+import os
 
 from api.schemas import HealthResponse
 from api.services.model_service import ModelService, get_model_service
@@ -54,6 +56,20 @@ def root():
 def health_check(service: ModelService = Depends(get_model_service)) -> HealthResponse:
     """Service health and model availability check."""
     return service.get_health()
+
+
+@app.get("/docs/pdf", tags=["Documentation"])
+def download_documentation_pdf():
+    """Download or view the comprehensive project documentation PDF."""
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    pdf_path = os.path.join(base_dir, "Real_Time_Fraud_Detection_Comprehensive_Documentation.pdf")
+    if os.path.exists(pdf_path):
+        return FileResponse(
+            pdf_path,
+            media_type="application/pdf",
+            filename="Real_Time_Fraud_Detection_Comprehensive_Documentation.pdf"
+        )
+    raise HTTPException(status_code=404, detail="Documentation PDF file not found.")
 
 
 # Backwards-compatible exports

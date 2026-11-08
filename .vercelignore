@@ -1,0 +1,21 @@
+# Tell Vercel to completely ignore Python ML dependencies & files
+# This prevents Vercel from building 6GB Python serverless functions
+api/
+database/
+deployment/
+feature_store/
+graph/
+kafka/
+models/
+monitoring/
+notebooks/
+tests/
+scripts/
+requirements.txt
+Dockerfile
+docker-compose.yml
+*.py
+*.pkl
+*.parquet
+*.db
+*.pdf
