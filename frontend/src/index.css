@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  color-scheme: dark;
+
+  /* Default Theme: Titanium Carbon (Sleek Modern Dark) */
+  --bg-app: #090B10;
+  --bg-card: #11141D;
+  --bg-card-hover: #161A26;
+  --bg-surface: #0D0F17;
+  --border-color: #1F2432;
+  --border-hover: #2E364A;
+  --text-main: #F8FAFC;
+  --text-sub: #94A3B8;
+  --text-muted: #64748B;
+  --header-bg: rgba(13, 15, 23, 0.88);
+  --ambient-glow: radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.08) 0%, transparent 65%);
+}
+
+.theme-titanium {
+  --bg-app: #090B10;
+  --bg-card: #11141D;
+  --bg-card-hover: #161A26;
+  --bg-surface: #0D0F17;
+  --border-color: #1F2432;
+  --border-hover: #2E364A;
+  --text-main: #F8FAFC;
+  --text-sub: #94A3B8;
+  --text-muted: #64748B;
+  --header-bg: rgba(13, 15, 23, 0.88);
+  --ambient-glow: radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.08) 0%, transparent 65%);
+}
+
+.theme-midnight {
+  --bg-app: #050811;
+  --bg-card: #0C1120;
+  --bg-card-hover: #12192F;
+  --bg-surface: #090D1A;
+  --border-color: #172238;
+  --border-hover: #243557;
+  --text-main: #F8FAFC;
+  --text-sub: #94A3B8;
+  --text-muted: #64748B;
+  --header-bg: rgba(9, 13, 26, 0.88);
+  --ambient-glow: radial-gradient(circle at 50% 0%, rgba(37, 99, 235, 0.09) 0%, transparent 65%);
+}
+
+.theme-light {
+  color-scheme: light;
+  --bg-app: #F4F6F9;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #F8FAFC;
+  --bg-surface: #EDF1F7;
+  --border-color: #E2E8F0;
+  --border-hover: #CBD5E1;
+  --text-main: #0F172A;
+  --text-sub: #475569;
+  --text-muted: #94A3B8;
+  --header-bg: rgba(255, 255, 255, 0.92);
+  --ambient-glow: radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.04) 0%, transparent 60%);
+}
+
+.theme-light body,
+.theme-light .text-white {
+  color: #0F172A !important;
+}
+
+.theme-light .text-slate-100,
+.theme-light .text-slate-200 {
+  color: #1E293B !important;
+}
+
+.theme-light .text-slate-300,
+.theme-light .text-slate-400 {
+  color: #475569 !important;
+}
+
+.theme-light .text-slate-500 {
+  color: #64748B !important;
+}
+
+.theme-light .border-slate-800,
+.theme-light .border-slate-800\/80,
+.theme-light .border-slate-800\/90 {
+  border-color: #E2E8F0 !important;
+}
+
+.theme-light .border-slate-700,
+.theme-light .border-slate-700\/80 {
+  border-color: #CBD5E1 !important;
+}
+
+.theme-light .hover\:bg-slate-800\/40:hover,
+.theme-light .hover\:bg-slate-800\/60:hover {
+  background-color: #F1F5F9 !important;
+}
+
+code, pre, .font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Custom dark/light scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-app);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-hover);
+}
+
+/* Polished Card Hover Transitions */
+.card-hover {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-hover:hover {
+  border-color: var(--border-hover);
+  transform: translateY(-1px);
+}
+
+/* Ambient glow container */
+.ambient-bg {
+  background-image: var(--ambient-glow);
+}

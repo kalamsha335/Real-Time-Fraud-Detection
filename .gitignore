@@ -1,0 +1,39 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Large datasets & raw data files (GitHub rejects files > 100MB)
+dataset/
+*.csv
+*.csv.zip
+*.tar.gz
+*.gz
+
+# Local SQLite databases (created automatically on first run)
+database/*.db
+
+# MLflow run artifacts and logs (preserve mlflow.db sqlite file)
+mlruns/
+.pytest_cache/
+
+# Node / Frontend
+frontend/node_modules/
+frontend/build/
+frontend/dist/
+.DS_Store
+
+# Environment variables & secrets
+.env
